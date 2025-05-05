@@ -1,0 +1,6 @@
+@DFD_compulsory_HostAddress = http://localhost:5275
+
+GET {{DFD_compulsory_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
