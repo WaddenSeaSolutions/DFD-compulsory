@@ -1,4 +1,4 @@
-namespace DFD_compulsory.Services;
+namespace DFD_compulsory.Domain.Services;
 
 public class IBlobStorageService
 {
