@@ -1,4 +1,4 @@
-﻿namespace DFD_compulsory.Tests
+﻿namespace DFD_compulsory.Tests.UnitTests
 {
     public class ListingTests
     {
