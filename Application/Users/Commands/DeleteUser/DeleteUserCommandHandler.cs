@@ -1,0 +1,6 @@
+namespace DFD_compulsory.Application.Users.Commands.DeleteUser;
+
+public class DeleteUserCommandHandler
+{
+    
+}
