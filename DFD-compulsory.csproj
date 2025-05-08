@@ -8,11 +8,18 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2"/>
+      <Compile Remove="CQRS\**" />
+      <Content Remove="CQRS\**" />
+      <EmbeddedResource Remove="CQRS\**" />
+      <None Remove="CQRS\**" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="CQRS\" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Application\Listings\Queries\" />
     </ItemGroup>
 
 </Project>
