@@ -22,7 +22,7 @@ Begrundelse:
 - Ideel til strukturerede relationer, dette kunne være kobling mellem brugere, varer og transaktioner.
 
 2. Data Schema and Storage Strategy:
-Vi bruger en NoSQL-database til alle datatyper, da det giver fleksibilitet, høj skalerbarhed og god understøttelse af semi-strukturerede data som bruger genererede data.
+Vi har tænkt os at bruge en NoSQL-database og Relation Database, da det giver fleksibilitet, høj skalerbarhed og god understøttelse af semi-strukturerede data, fordi vi deler data op i to forskellige databaser.
 
 Dataobjekter:
 User:
@@ -39,8 +39,7 @@ Review:
 
 3. Integration af Cloud Storage:
 Billeder og mediefiler gemmes eksternt i cloud storage, f.eks. Amazon S3 eller Azure Blob Storage, i stedet for direkte i databasen.
-- Når en bruger uploader et billede, håndteres det af en service (IBlobStorageService), som returnerer en URL.
-
+- Når en bruger uploader et billede, vil det blive håndteret af en service (IBlobStorageService), som så skal returnerer en URL.
 - Denne URL gemmes som en streng i f.eks. ImageUrls-feltet på Listing.
 
 Fordele:
@@ -68,3 +67,6 @@ Selvom MongoDB ikke er relationsbaseret, tilbyder det transaktioner på tværs a
 Vi sikrer transaktionel integritet i følgende scenarier:
 - Når en Order placeres, oprettes ordren og den relaterede Listing markeres som solgt.
 - Ved opdatering/sletning af en Listing, sikres konsistens ved at validere at ingen igangværende Order refererer til den.
+
+
+Alt dette 
