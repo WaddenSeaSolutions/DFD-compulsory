@@ -2,7 +2,6 @@
    NoSQL Database: MongoDB
 
    Anvendes til:
-   - Listings
    - Brugerprofiler
    - Sælgeranmeldelser
 
@@ -14,6 +13,7 @@
 
     Relationsdatabase: PostgreSQL
     Anvendes til:
+    - Listings
     - Ordrer
     - Betalinger
 
