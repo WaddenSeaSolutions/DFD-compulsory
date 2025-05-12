@@ -69,4 +69,8 @@
     - Ved opdatering/sletning af en Listing, sikres konsistens ved at validere at ingen igangværende Order refererer til den.
 
 
-Alt dette 
+Arkitekturen er designet med fokus på skalerbarhed, fleksibilitet og performance. Dette har vi gjort ved, at vi anvender MongoDB til dynamiske og brugergenererede data, såsom annoncer og brugere.
+Hertil bruger vi PostgreSQL til strukturerede og transaktionelle data, såsom ordrer og betalinger. Dette gør, at vi opnår det bedste fra begge verdener.
+Vi vil benytte cloud storage til billeder for at holde databasen effektiv, Redis caching for hurtig adgang til hyppigt anvendte data, og CQRS til at adskille read og write for øget vedligeholdelse og skalerbarhed.
+Til sidst vil vi sikrer at transaction integritet i kritiske scenarier. Som når der bliver oprettet ordrer, og der sker opdateringer af annoncer, hvilket vil gøre systemet robust og pålideligt.
+Strukturen sikrer, at vores platform kan tilpasses, samt vokse ift. fremtidige behov og krav. Herunder uden, at man går på kompromis med ydeevne eller stabilitet.
